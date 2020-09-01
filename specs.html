@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="_css/style.css">
+		<link rel="stylesheet" type="text/css" href="_css/specs.css">
+		<title>Tudo sobre Google Glass</title>
+		<script language="javascript" src="_javascript/funcoes.js"></script>
+	</head>
+	<body>
+		<div id="interface">
+			<header id="cabecalho">
+				<hgroup>
+					<h1>Google Glass</h1>
+					<h2>A revolução do Google está chegando</h2>
+				</hgroup>
+
+				<img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+
+				<nav id="menu" onmouseout="mudarFoto('_imagens/especificacoes.png')">
+					<ul>
+						<h1>Menu Principal</h1>
+						<li><a onmouseover="mudarFoto('_imagens/home.png')" href="index.html">Home</a></li>
+						<li><a onmouseover="mudarFoto('_imagens/especificacoes.png')" href="specs.html"> Especificações</a></li>
+						<li><a onmouseover="mudarFoto('_imagens/fotos.png')" href="fotos.html"> Fotos</a></li>
+						<li><a onmouseover="mudarFoto('_imagens/multimidia.png')" href="multimidia.html"> Multimídia</a></li>
+						<li><a onmouseover="mudarFoto('_imagens/contato.png')" href="fale-conosco.html"> Fale conosco</a></li>		
+					</ul>
+				</nav>
+			</header>
+
+		<article id="artigoPrincipal">
+			<header id="cabecalhoArtigo">
+				<h3>Glass > Especificações</h3>
+				<h1>Raio-X no Google Glass</h1>
+				<h2>por Gabriel dos Reis</h2>
+				<h3 class="dataCabecalho">Atualizado em 25/Agosto/2020</h3>
+			</header>
+
+			<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+			<section id="conteudo">
+				<img src="_imagens/glass-esquema-marcado.jpg" usemap="#mapaGlass">
+				<map name="mapaGlass">
+					<area shape="rect" coords="179, 202, 270, 260" href="google-glass.html#tela" target="janela">
+
+					<area shape="circle" coords="158, 243, 12" href="google-glass.html#camera" target="janela">
+
+					<area shape="circle" coords="73, 52, 12" href="google-glass.html#bateriaGadget" target="janela">
+
+					<area shape="poly" coords="28, 143, 83, 216, 84, 249, 27, 169" href="google-glass.html#sensores" target="janela">
+				</map>
+				<iframe src="google-glass.html" name="janela" id="frameSpec" scrolling="no"></iframe>
+			</section>
+		</article>
+
+			<footer id="rodape">
+				<p>&copy;  2020 - by Gabriel Reis<br></p>
+				<p>Baseado num <a href="https://www.youtube.com/user/cursosemvideo" target="_blank"> curso de HTML.</p>
+			</footer>
+
+		</div>
+	</body>
+</html>

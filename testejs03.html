@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teste JS</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		var lampadaAcesa = false;
+		var resistencia = 10;
+
+		function lampadaInterativa(){
+			if (!lampadaAcesa) {
+				document.getElementById("lampada").src = "_imagens/lampada-acesa.jpg";
+				lampadaAcesa = true;
+				resistencia --;
+			}else if (resistencia == 0) {
+				document.getElementById("lampada").src= "_imagens/lampada-quebrada.jpg";
+			}else{
+				document.getElementById("lampada").src = "_imagens/lampada-apagada.jpg";
+				lampadaAcesa = false;
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Acenda a Lâmpada</h1>
+	<img src="_imagens/lampada-apagada.jpg" id="lampada" onclick="lampadaInterativa()"/>
+</body>
+</html>

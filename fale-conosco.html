@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
+    <title>Tudo sobre Google Glass</title>
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>
+
+            <img id="icone" src="_imagens/glass-oculos-preto-peq.png">
+
+            <nav id="menu" onmouseout="mudarFoto('_imagens/contato.png')">
+                <ul>
+                    <h1>Menu Principal</h1>
+                    <li><a onmouseover="mudarFoto('_imagens/home.png')" href="index.html">Home</a></li>
+                    <li><a onmouseover="mudarFoto('_imagens/especificacoes.png')" href="specs.html"> Especificações</a></li>
+                    <li><a onmouseover="mudarFoto('_imagens/fotos.png')" href="fotos.html"> Fotos</a></li>
+                    <li><a onmouseover="mudarFoto('_imagens/multimidia.png')" href="multimidia.html"> Multimídia</a></li>
+                    <li><a onmouseover="mudarFoto('_imagens/contato.png')" href="fale-conosco.html"> Fale conosco</a></li>      
+                </ul>
+            </nav>
+        </header>
+
+        <article id="artigoPrincipal">
+            <header id="cabecalhoArtigo">
+                <h3>Fale Conosco > Contato</h3>
+                <h1>Formulário de Contato</h1>
+                <h2>por Gabriel dos Reis</h2>
+                <h3 class="dataCabecalho">Atualizado em 25/Agosto/2020</h3>
+            </header>
+
+            <form method="post" id="faleConosco" action="mailto:gabriel-reis1999@hotmail.com" oninput="calcTotal();">
+                <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                    <p><label for="nomeInput">Nome: </label><input type="text" name="nomeUsuario" id="nomeInput" size="20" maxlength="23" placeholder="Nome Completo" required=""></p>
+                    <p><label for="senhaInput">Senha: </label> <input type="password" name="senhaUsuario" id="senhaInput" size="17" maxlength="12" placeholder="Senha de 12 Digítos" required=""></p>
+                    <p><label for="emailInput">E-mail: </label><input type="email" name="emailUsuario" id="emailInput" size="20" maxlength="40" placeholder="Email para Contato" required=""> </p>
+                    <fieldset id="sexo"><legend>Sexo:</legend>
+                        <input type="radio" name="sexo" id="sexoMas" required=""> <label for="sexoMas">Masculino</label>
+                        <br>
+                        <input type="radio" name="sexo" id="sexoFem" required=""> <label for="sexoFem">Feminino</label>
+                    </fieldset>
+                    <p><label for="dataInput">Data de Nascimento: </label><input type="date" name="dataNascimento" id="dataInput" required=""></p>
+                </fieldset>
+
+                <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                    <p><label for="logradouroInput">Logradouro:</label> <input type="text" name="logradouroUsuario" id="logradouroInput" size="20" maxlength="80" placeholder="Rua, Avenida, Travessa" required=""> </p>
+
+                    <p><label for="numeroUsuario">Número: </label><input type="number" name="numeroEndereco" id="numeroInput" placeholder="Número da Casa" min="1" max="9999" size="4" required=""></p>
+
+                    <p>Estado: <select name="estadoUsuario" id="estadoInput">
+                        <optgroup label="Região Nordeste">
+                            <option value="CE">Ceará</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="PE">Pernambuco</option>
+                            <option selected value="BA">Bahia</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PI">Piauí</option>
+                            <option value="AL">Alagoas</option>
+                        </optgroup>
+                    </select></p>
+
+                    <p><label for="cidadeInput">Cidade: </label><input type="text" name="cidadeUsuario" id="cidadeInput" placeholder="Cidade" maxlength="20" size="20" list="cidadesNordeste" required=""></p>
+                    <datalist id="cidadesNordeste">
+                        <option value="Salvador"></option>
+                        <option value="Recife"></option>
+                        <option value="Aracaju"></option>
+                        <option value="Fortaleza"></option>
+                        <option value="Maceió"></option>
+                        <option value="Amargosa"></option>
+                        <option value="Feira de Santana"></option>></optgroup>
+                    </datalist>
+                </fieldset>
+
+                <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                    <p><label for="urgenciaInput">Grau de Urgência: Min</label><input type="range" name="urgenciaUsuario" id="urgenciaInput" min="0" max="10" step="1">Max</p>
+                    <p><label for="mensagemInput">Mensagem: </label><textarea name="mensagemUsuario" id="mensagemInput" rows="5" cols="45" placeholder="Deixe aqui sua mensagem!"></textarea></p>
+                </fieldset>
+
+                <fieldset id="queroGlass"><legend>Quero um Google Glass</legend>
+                    <p><label for="adquirirInput"><input type="checkbox" name="adquirirGlass" id="adquirirInput" checked="">Gostaria de adquirir um Google Glass quando disponível
+                    </label></p>
+                    <p><label for="corInput">Cor: </label><input type="color" name="corUsuario" id="corInput" value="#000000"> </p>
+                    <p><label for="qtdInput">Quantidade: </label><input type="number" name="qtdUsuario" id="qtdInput" min="1" max="5" size="2" required=""></p>
+                    <p><label for="precoInput">Preço Total: R$ </label><input type="text" name="precoGlass" id="precoInput" placeholder="Total a Pagar" readonly="" required=""></p>
+                </fieldset>
+
+                <input type="image" name="enviar" src="_imagens/botao-enviar.png" id="submitInput" onclick="enviarMsg();">
+            </form>
+
+        </article>
+
+            <footer id="rodape">
+                <p>&copy;  2020 - by Gabriel Reis<br></p>
+                <p>Baseado num <a href="https://www.youtube.com/user/cursosemvideo" target="_blank"> curso de HTML.</p>
+            </footer>
+
+        </div>
+    </body>
+</html>
